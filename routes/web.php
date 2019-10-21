@@ -51,3 +51,9 @@ Route::get('/', function () {
 Route::get('say/{name?}',['as'=>'hello.index',function($name='Everybody'){
     return view('welcome');
 }]);
+
+//練習5：設定 Route 前置
+//練習5-1
+Route::get('dashboard',function(){
+    return'dashboard';
+});
