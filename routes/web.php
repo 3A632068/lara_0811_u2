@@ -40,10 +40,14 @@
 
 //練習4：為 Route 命名
 //練習4-1
-Route::get('hello/{name?}',['as'=>'hello.index',function($name='Everybody'){
+/*Route::get('hello/{name?}',['as'=>'hello.index',function($name='Everybody'){
     return'Hello,'.$name;
-}]);
+}]);*/
 //練習4-2
 Route::get('/', function () {
     return view('welcome');
 });
+//練習4-3
+Route::get('say/{name?}',['as'=>'hello.index',function($name='Everybody'){
+    return view('welcome');
+}]);
