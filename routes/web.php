@@ -11,12 +11,23 @@
 |
 */
 
-Route::get('/', function () {
+//練習1：設定 Route 反應
+//Route::get('/', function () {
     // return view('welcome');
     //練習 1-1
     // return 'welcome';
     //練習 1-2
     //return view('welcome');
     //練習 1-3
-    return redirect('welcome');
+    //return redirect('welcome');
+//});
+
+//練習2：設定 Route 接收參數
+//練習2-1
+/*Route::get('hello/{name}',function($name){
+    return'Hello,'.$name;
+});*/
+//練習2-3
+Route::get('hello/{name?}',function($name='Everybody'){
+    return'Hello,'.$name;
 });
