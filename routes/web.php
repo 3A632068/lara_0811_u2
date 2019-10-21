@@ -28,13 +28,19 @@
     return'Hello,'.$name;
 });*/
 //練習2-3
-Route::get('hello/{name?}',function($name='Everybody'){
+/*Route::get('hello/{name?}',function($name='Everybody'){
     return'Hello,'.$name;
-});
+});*/
 
-//練習3
+//練習3：使用 artisan 指令了解目前 route 內容
 //練習3-3增加新的 Route
-Route::get('hello/{name?}',function($name='Test'){
+/*Route::get('hello/{name?}',function($name='Test'){
     return'Hello,'.$name;
-});
+});*/
+
+//練習4：為 Route 命名
+//練習4-1
+Route::get('hello/{name?}',['as'=>'hello.index',function($name='Everybody'){
+    return'Hello,'.$name;
+}]);
 
