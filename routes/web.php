@@ -32,4 +32,9 @@ Route::get('hello/{name?}',function($name='Everybody'){
     return'Hello,'.$name;
 });
 
+//練習3
+//練習3-3增加新的 Route
+Route::get('hello/{name?}',function($name='Test'){
+    return'Hello,'.$name;
+});
 
