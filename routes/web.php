@@ -43,4 +43,7 @@
 Route::get('hello/{name?}',['as'=>'hello.index',function($name='Everybody'){
     return'Hello,'.$name;
 }]);
-
+//練習4-2
+Route::get('/', function () {
+    return view('welcome');
+});
