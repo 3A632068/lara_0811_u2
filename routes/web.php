@@ -12,15 +12,15 @@
 */
 
 //練習1：設定 Route 反應
-//Route::get('/', function () {
-// return view('welcome');
+Route::get('/', function () {
+ return view('welcome');
 //練習 1-1
 // return 'welcome';
 //練習 1-2
 //return view('welcome');
 //練習 1-3
 //return redirect('welcome');
-//});
+});
 
 //練習2：設定 Route 接收參數
 //練習2-1
@@ -54,12 +54,16 @@
 
 //練習5：設定 Route 前置
 //練習5-1
-Route::get('dashboard',function(){
+/*Route::get('dashboard',function(){
     return'dashboard';
-});
+});*/
 //練習5-2
-Route::group(['prefix'=>'admin'],function(){
+/*Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard',function(){
         return'admin dashboard';
     });
-});
+});*/
+
+//練習7：將 Route 的內容搬至 Controller 內
+//練習7-1
+Route::get('/',['as'=>'home.index','uses'=>'HomeController@index']);
