@@ -13,7 +13,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //
+        //練習7-2
+        return 'index';
     }
 
     /**
