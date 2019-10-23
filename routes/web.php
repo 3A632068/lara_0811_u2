@@ -13,13 +13,16 @@
 
 //練習1：設定 Route 反應
 Route::get('/', function () {
- return view('welcome');
+ //return view('welcome');
 //練習 1-1
 // return 'welcome';
 //練習 1-2
 //return view('welcome');
 //練習 1-3
-//return redirect('welcome');
+return redirect('welcome');
+});
+Route::get('welcome',function(){
+    return'welcome';
 });
 
 //練習2：設定 Route 接收參數
@@ -40,9 +43,9 @@ Route::get('/', function () {
 
 //練習4：為 Route 命名
 //練習4-1
-Route::get('hello/{name?}',['as'=>'hello.index',function($name='Everybody'){
+/*Route::get('hello/{name?}',['as'=>'hello.index',function($name='Everybody'){
     return'Hello,'.$name;
-}]);
+}]);*/
 //練習4-2
 /*Route::get('/', function () {
     return view('welcome');
@@ -66,4 +69,4 @@ Route::get('hello/{name?}',['as'=>'hello.index',function($name='Everybody'){
 
 //練習7：將 Route 的內容搬至 Controller 內
 //練習7-1
-Route::get('/',['as'=>'home.index','uses'=>'HomeController@index']);
+/*Route::get('/',['as'=>'home.index','uses'=>'HomeController@index']);*/
